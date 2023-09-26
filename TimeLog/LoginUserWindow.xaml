@@ -1,0 +1,21 @@
+﻿<Window x:Class="TimeLog.LoginUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeLog"
+        mc:Ignorable="d"
+        Title="LoginUserWindow" Height="450" Width="600">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="71,134,0,0" TextWrapping="Wrap" Text="LOGIN YOUR ACCOUNT" VerticalAlignment="Top" Height="262" Width="279" FontSize="48" FontFamily="Segoe UI Light"/>
+
+        <TextBlock FontFamily="Segoe UI Light" HorizontalAlignment="Left" Height="17" Margin="355,144,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.471,3.414"/>
+        <TextBox x:Name="user" HorizontalAlignment="Left" Margin="355,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="20" FontFamily="Segoe UI Light" MaxLength="100"/>
+
+        <TextBlock FontFamily="Segoe UI Light" HorizontalAlignment="Left" Height="17" Margin="355,191,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.471,3.414"/>
+        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="355,213,0,0" VerticalAlignment="Top" Width="170" Height="20" MaxLength="100"/>
+
+        <Button x:Name="createButton" Content="Login" HorizontalAlignment="Left" Height="25" Margin="355,240,0,0" VerticalAlignment="Top" Width="170" FontFamily="Segoe UI Semibold" Click="createButtonClick"/>
+
+    </Grid>
+</Window>

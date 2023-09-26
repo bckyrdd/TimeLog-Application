@@ -1,0 +1,59 @@
+﻿<Window x:Class="TimeLog.NewUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeLog"
+        mc:Ignorable="d"
+        Title="NewUserWindow" Height="450" Width="600">
+    <Grid>
+        <TextBox x:Name="empID" HorizontalAlignment="Left" Margin="340,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="20" FontFamily="Segoe UI Light" MaxLength="100"/>
+        <TextBlock IsHitTestVisible="False" Text="Employee ID" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="343,80,0,0" Foreground="DarkGray" FontFamily="Segoe UI Light">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=empID}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox x:Name="fullName" HorizontalAlignment="Left" Margin="340,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="20" FontFamily="Segoe UI Light" MaxLength="100"/>
+        <TextBlock IsHitTestVisible="False" Text="Complete Name" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="343,123,0,0" Foreground="DarkGray" FontFamily="Segoe UI Light">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=fullName}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+
+        <TextBox x:Name="user" HorizontalAlignment="Left" Margin="340,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="20" FontFamily="Segoe UI Light" MaxLength="100"/>
+        <TextBlock IsHitTestVisible="False" Text="Username" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="343,168,0,0" Foreground="DarkGray" FontFamily="Segoe UI Light">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=user}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <PasswordBox x:Name="pass" Width="170" Height="20" Margin="340,213,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" MaxLength="100"/>
+        <PasswordBox x:Name="confirmPass"  Width="170" Height="20" Margin="340,257,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" MaxLength="100"/>
+
+        <Button x:Name="createButton" Content="Create Account" HorizontalAlignment="Left" Height="30" Margin="340,296,0,0" VerticalAlignment="Top" Width="170" FontFamily="Segoe UI Semibold" Click="createButtonClick"/>
+        <TextBlock HorizontalAlignment="Left" Margin="76,0,0,0" TextWrapping="Wrap" Text="CREATE YOUR NEW ACCOUNT" VerticalAlignment="Center" Height="262" Width="242" FontSize="48" FontFamily="Segoe UI Light"/>
+        <TextBlock TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="340,194,0,0" FontFamily="Segoe UI Light"/>
+        <TextBlock TextWrapping="Wrap" Text="Confirm Password" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="340,238,0,0" FontFamily="Segoe UI Light"/>
+    </Grid>
+</Window>
